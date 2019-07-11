@@ -1,0 +1,49 @@
+body{
+    background: black;
+}
+
+header{
+      display: flex;
+      justify-content: space-between;
+      background:lightgoldenrodyellow;
+      font-size: 30px;
+}
+
+button{
+    font-size: 20px;
+    background: lightgreen;
+    border: 4px red solid;
+    min-width: 15vw;
+}
+.backgroundImage {
+    display:flex;
+    justify-content: center
+}   
+.road{
+    width: 60vw;
+    height: 80vh;
+    background-color: green;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 1;
+}
+.playerCar{
+    height:6vw;
+    width:10vh;
+    background-image: url(car.png)
+}
+img{
+    height: 80vh;
+    width: 100vw;
+}
+
+.footercontainer{
+    display: flex;
+    align-items: flex-end;
+} 
+
+footer{
+    align-items: flex-end;
+    min-height: 7vh;
+    background:lightgoldenrodyellow;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "dont-be-late",
+  "version": "0.0.1",
+  "description": "an obstacle avoidance racing game",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "fix-all": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jcillo507/dont-be-late.git"
+  },
+  "keywords": [
+    "dont",
+    "be",
+    "late",
+    "racing"
+  ],
+  "author": "Joe Cillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jcillo507/dont-be-late/issues"
+  },
+  "homepage": "https://github.com/Jcillo507/dont-be-late#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0"
+  }
+}
