@@ -22,21 +22,29 @@ button {
 }
 
 .road {
-    width: 60vw;
+    width: 100vw;
     height: 80vh;
-    background-color: green;
+    background-color: transparent;
     margin: 0 auto;
     position: absolute;
     opacity: 1;
 }
 
 .playerCar {
-    height: 6vw;
-    width: 10vh;
-    background-image: url(car.png);
-    position: absolute
+    background-color:gray;
+    position: absolute;
+    opacity:1;
+    transition: all 0.1s;
 }
-
+.playerCarPic{
+    height: 20vh;
+    width: 15vw;
+}
+.obstacleCar{
+    height: 20vh;
+    width: 20vw;
+    background-color:black
+}
 img {
     height: 80vh;
     width: 100vw;
