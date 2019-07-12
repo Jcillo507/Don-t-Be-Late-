@@ -1,25 +1,27 @@
-body{
+body {
     background: black;
 }
 
-header{
-      display: flex;
-      justify-content: space-between;
-      background:lightgoldenrodyellow;
-      font-size: 30px;
+header {
+    display: flex;
+    justify-content: space-between;
+    background: lightgoldenrodyellow;
+    font-size: 30px;
 }
 
-button{
+button {
     font-size: 20px;
     background: lightgreen;
     border: 4px red solid;
     min-width: 15vw;
 }
+
 .backgroundImage {
-    display:flex;
+    display: flex;
     justify-content: center
-}   
-.road{
+}
+
+.road {
     width: 60vw;
     height: 80vh;
     background-color: green;
@@ -27,23 +29,26 @@ button{
     position: absolute;
     opacity: 1;
 }
-.playerCar{
-    height:6vw;
-    width:10vh;
-    background-image: url(car.png)
+
+.playerCar {
+    height: 6vw;
+    width: 10vh;
+    background-image: url(car.png);
+    position: absolute
 }
-img{
+
+img {
     height: 80vh;
     width: 100vw;
 }
 
-.footercontainer{
+.footercontainer {
     display: flex;
     align-items: flex-end;
-} 
+}
 
-footer{
+footer {
     align-items: flex-end;
     min-height: 7vh;
-    background:lightgoldenrodyellow;
+    background: lightgoldenrodyellow;
 }
