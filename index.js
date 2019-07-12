@@ -1,9 +1,9 @@
 // moves car
-const playerCar = { x: 0, y: 0 };
+const playerCar = { x: 20, y: 20 };
 const obstacleCars = {};
 
 const isOnRoad = (x, y) => {
-  if (x < 0 || y < 0 || x > 62 || y > 24) {
+  if (x < 0 || y < 0 || x > 64 || y > 24) {
     return false;
   }
   return true;
@@ -67,10 +67,10 @@ window.addEventListener('keydown', (evt) => {
   }
 });
 // creates obstacles
-if (obstacleCars.length < 3) {
-  for (let i = 0; i < obstacleCars.length; i += 1) {
-    const newObstacle = document.createElement('div');
-    newObstacle.classList.add('obstacleCar');
-    document.querySelector('.road').appendChild(newObstacle);
-  }
-}
+const createNewObstacle = () => {
+  const newObstacle = document.createElement('div');
+  newObstacle.classList.add('obstacleCar');
+  document.querySelector('.road').appendChild(newObstacle);
+};
+createNewObstacle()
+// setInterval(createNewObstacle, 2000);
