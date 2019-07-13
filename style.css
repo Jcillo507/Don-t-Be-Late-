@@ -28,7 +28,7 @@ button {
     background-size: cover;
     margin: 0 auto;
     position: relative;
-    opacity: 1;
+
 }
 
 .playerCar {
@@ -36,8 +36,10 @@ button {
     opacity:1;
     transition: all 0.1s;
     background-image: url('car.png');
+    background-size: contain;
     height: 20vh;
-    width: 10vw;
+    width: 5vw;
+    background-repeat: no-repeat;
 }
 /* .playerCarPic{
     height: 20vh;
@@ -45,7 +47,7 @@ button {
 } */
 .obstacleCar{
     height: 20vh;
-    width: 20vw;
+    width: 5vw;
     background-image: url('blue-car.png'); 
     position: relative;
 }

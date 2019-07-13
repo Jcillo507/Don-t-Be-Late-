@@ -1,9 +1,14 @@
+/* eslint-disable */
 // moves car
-const playerCar = { x: 20, y: 20 };
-const obstacleCars = {};
+const playerCar = { x: 32, y: 12 };
+const playerMove = document.querySelector('.playerCar');
+// const obstacleCars = {};
+
+playerMove.style.left = '650px';
+playerMove.style.top = '240px';
 
 const isOnRoad = (x, y) => {
-  if (x < 0 || y < 0 || x > 64 || y > 24) {
+  if (x < 0 || y < 0 || x > 67 || y > 24) {
     return false;
   }
   return true;
@@ -16,7 +21,6 @@ const onScreen = (x, y) => {
   return true;
 };
 
-const playerMove = document.querySelector('.playerCar');
 function movePlayerCar() {
   playerMove.style.left = `${(playerCar.x * 20).toString()}px`;
   playerMove.style.top = `${(playerCar.y * 20).toString()}px`;
@@ -68,9 +72,10 @@ window.addEventListener('keydown', (evt) => {
 });
 // creates obstacles
 const createNewObstacle = () => {
-  const newObstacle = document.createElement('div');
-  newObstacle.classList.add('obstacleCar');
-  document.querySelector('.road').appendChild(newObstacle);
+  const obstacleCar = document.createElement('div');
+  obstacleCar.classList.add('obstacleCar');
+  obstacleCar.style.left = `${Math.random() * 1424}px`;
+  document.querySelector('.road').appendChild(obstacleCar);
 };
-createNewObstacle()
+createNewObstacle();
 // setInterval(createNewObstacle, 2000);
