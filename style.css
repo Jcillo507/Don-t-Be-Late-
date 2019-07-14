@@ -41,24 +41,18 @@ button {
     width: 5vw;
     background-repeat: no-repeat;
 }
-/* .playerCarPic{
-    height: 20vh;
-    width: 15vw;
-} */
+
 .obstacleCar{
     height: 20vh;
     width: 5vw;
     background-image: url('blue-car.png'); 
-    position: relative;
-}
-img {
-    height: 80vh;
-    width: 100vw;
+    position: absolute;
+    background-size: contain;
+
 }
 
 .footercontainer {
     display: flex;
-    align-items: flex-end;
 }
 
 footer {
