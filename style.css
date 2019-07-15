@@ -1,14 +1,21 @@
 body {
     background: black;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background: lightgoldenrodyellow;
-    font-size: 30px;
+    font-size: 20px;
 }
-
+h2{ 
+    align-content: center;
+}
 button {
     font-size: 20px;
     background: lightgreen;
@@ -35,28 +42,65 @@ button {
     position: absolute;
     opacity:1;
     transition: all 0.1s;
-    background-image: url('car.png');
+    background-image: url('whiteCar.png');
     background-size: contain;
-    height: 20vh;
-    width: 5vw;
+    height: 180px;
+    width: 45px;
     background-repeat: no-repeat;
 }
 
-.obstacleCar{
-    height: 20vh;
-    width: 5vw;
-    background-image: url('blue-car.png'); 
+.blueCar{
+    height: 180px;
+    width: 45px;
+    background-image: url('blueCar.png'); 
     position: absolute;
     background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.whiteCar {
+    height: 180px;
+    width: 45px;
+    background-image: url('whiteCar.png');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.greenCar {
+    height: 180px;
+    width: 45px;
+    background-image: url('greenCar.png');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
-.footercontainer {
+.redCar {
+    height: 180px;
+    width: 45px;
+    background-image: url('redCar.png');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.footerContainer {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
 }
-
+.timer{
+    z-index: 2;
+}
+.restart{
+    height : 8vh;
+}
 footer {
-    align-items: flex-end;
-    min-height: 7vh;
+    min-height: 10vh;
     background: lightgoldenrodyellow;
+
 }
