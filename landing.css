@@ -1,0 +1,70 @@
+*{
+    margin: 19px auto;
+}
+body{
+        background: #70697B;
+        /* position: fixed; */
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;  
+}
+.container{
+     display: flex; 
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+    }
+    @keyframes colorChange{
+        0% {
+            color: #87C2A5;
+        }
+        20%{
+            color:#9CDBA1;
+        }
+        40% {
+            color:#C2F195;
+        }
+        60%{
+            color:#C2F195;
+        }
+        80%{
+            color: #9CDBA1;
+        }
+        100% {
+            color: #87C2A5;
+        }
+    }
+.first{
+    font-family: 'Acme',sans-serif;
+    font-size: 40px;
+    color:#81A79E;
+    } 
+.second{
+    font-family: 'Acme',sans-serif;
+    font-size: 80px;
+    color:#81A79E;
+    }
+.third{
+    font-family: 'Acme',sans-serif;
+    font-size: 40px;
+    color:#81A79E;
+}
+.fourth{
+    font-family: 'Acme',sans-serif;
+    font-size: 30px;
+    color:#81A79E;
+}
+.playGame{
+    height: 60%;
+    width: 100%;
+    font-size: 50px;
+    background-color:#81A79E;
+    color: #FFA186;
+    animation: colorChange 2s linear infinite
+    
+}
+img{
+    height:200px;
+    width: 500px;
+}

@@ -1,0 +1,36 @@
+*{
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #70697B;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+}
+.playGame {
+    height: 20%;
+    width: 40%;
+    font-size: 50px;
+    background-color: #81A79E;
+    color: #FFA186;
+    animation: colorChange 2s linear infinite
+}
+img{
+    width: 30%;
+    height: 50%;
+    border: 2px white solid;
+}
+p{
+     align-content: center;
+     color: #DAEFF6;
+     font-family: 'Acme',sans-serif;
+     font-size: 40px;
+     margin: 50px;
+}
