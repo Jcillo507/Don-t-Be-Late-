@@ -17,5 +17,5 @@ Use the arrow keys to move
 ## Game Play
 ![gameplay](screen-shot.png)
 
-##Play Game Here
+## Play Game Here
 https://jcillo507.github.io/dont-be-late/
