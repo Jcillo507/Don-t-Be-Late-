@@ -15,7 +15,7 @@ Use the arrow keys to move
 → move right
 
 ## Game Play
-!![gameplay](screen-shot.png)
+![gameplay](screen-shot.png)
 
 ##Play Game Here
 https://jcillo507.github.io/dont-be-late/
