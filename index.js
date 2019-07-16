@@ -28,6 +28,7 @@ const isThereObstacle = (obstacleCar) => {
   }
   return false;
 };
+// timer
 let timeNow = 60;
 setInterval(() => {
   timeNow -= 1;
@@ -37,6 +38,7 @@ setInterval(() => {
   window.location.replace('win.html');
   timeNow = 0;
 }, 60000);
+// create obstacles
 const createBlue = () => {
   const obstacleCar = document.createElement('div');
   obstacleCar.classList.add('blue-car');
@@ -132,7 +134,6 @@ const createGreen = () => {
     1,
   );
 };
-
 setInterval(() => {
   createBlue();
 }, 1000);
@@ -145,7 +146,7 @@ setInterval(() => {
 setInterval(() => {
   createGreen();
 }, 2000);
-
+// move player
 const inGrid = (x, y) => {
   if (x < 0 || y < 0 || x > 66 || y > 27) {
     return false;
@@ -158,7 +159,6 @@ const onScreen = (x, y) => {
   }
   return true;
 };
-// move player
 const movePlayerCar = () => {
   playerMove.style.left = `${(playerCar.x * 20).toString()}px`;
   playerMove.style.top = `${(playerCar.y * 20).toString()}px`;
