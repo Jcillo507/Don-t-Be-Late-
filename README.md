@@ -4,7 +4,7 @@ Don't be late is a racing obstacle avoidance game
 You woke up late and have one minute to get there. Can you make it?
 **Don't Be Late**
 
-##Instructions
+##Instructions##
 Avoid the oncoming traffic
 
 Use the arrow keys to move
@@ -14,7 +14,8 @@ Use the arrow keys to move
 ← move left
 → move right
 
-##Game Play
+##Game Play##
 !![gameplay](screen-shot.png)
 
 ##Play Game Here
+https://jcillo507.github.io/dont-be-late/
