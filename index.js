@@ -1,9 +1,6 @@
-/* eslint - disable; */
-
 const playerCar = {
-  x: 32, y: 12, height: '180px', width: '45px',
+  x: 32, y: 12, height: '90px', width: '45px',
 };
-
 
 const obstacleCars = [];
 
@@ -11,9 +8,9 @@ const playerMove = document.querySelector('.playerCar');
 
 playerMove.style.left = '650px';
 playerMove.style.top = '240px';
-const isThereObstacle = (obstacleCar) => {
-  const playerX = parseInt(playerCar.x, 10);
-  const playerY = parseInt(playerCar.y, 10);
+let isThereObstacle = (obstacleCar) => {
+  const playerX = parseInt(playerCar.x, 10) * 20;
+  const playerY = parseInt(playerCar.y, 10) * 20;
   const playerH = parseInt(playerCar.height, 10);
   const playerW = parseInt(playerCar.width, 10);
   const obstacleX = parseInt(obstacleCar.style.left, 10);
@@ -22,23 +19,38 @@ const isThereObstacle = (obstacleCar) => {
   const obstacleW = parseInt(obstacleCar.style.width, 10);
 
   if (
-    (playerX * 20 < obstacleX + obstacleW)
-    && ((playerX * 20) + playerW > obstacleX)
-    && ((playerY * 20) < obstacleY + obstacleH)
-    && ((playerY * 20) + playerH > obstacleY)
+    (playerX < obstacleX + obstacleW)
+    && (playerX + playerW > obstacleX)
+    && (playerY < obstacleY + obstacleH)
+    && (playerY + playerH > obstacleY)
 
   ) {
-    console.log('working');
+    window.location.replace('lose.html')
     return true;
   }
   return false;
 };
-
+let timeNow = 60;
+setInterval(() => {
+  timeNow -= 1;
+  document.querySelector('.timer').innerHTML = timeNow;
+}, 1000);
+const tenSecondsLeft = () => {
+  if (document.querySelector('.timer').innerHTML < 50) {
+    const timer = document.querySelector('.timer');
+    timer.classList.add('ten');
+  }
+};
+tenSecondsLeft();
+setInterval(() => {
+  window.location.replace('win.html');
+  timeNow = 0;
+}, 60000);
 const createBlue = () => {
   const obstacleCar = document.createElement('div');
   obstacleCar.classList.add('blueCar');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
-  obstacleCar.style.height = '180px';
+  obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
   obstacleCars.push(obstacleCar);
@@ -63,7 +75,7 @@ const createWhite = () => {
   const obstacleCar = document.createElement('div');
   obstacleCar.classList.add('whiteCar');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
-  obstacleCar.style.height = '180px';
+  obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
   obstacleCars.push(obstacleCar);
@@ -88,7 +100,7 @@ const createRed = () => {
   const obstacleCar = document.createElement('div');
   obstacleCar.classList.add('redCar');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
-  obstacleCar.style.height = '180px';
+  obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
   obstacleCars.push(obstacleCar);
@@ -113,7 +125,7 @@ const createGreen = () => {
   const obstacleCar = document.createElement('div');
   obstacleCar.classList.add('greenCar');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
-  obstacleCar.style.height = '180px';
+  obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
   obstacleCars.push(obstacleCar);
@@ -127,7 +139,7 @@ const createGreen = () => {
         obstacleCars.splice(obstacleCar);
       } else {
         isThereObstacle(obstacleCar);
-        obstacleCar.y += 2;
+        obstacleCar.y += 4;
         obstacleCar.style.top = `${obstacleCar.y}px`;
       }
     },
@@ -135,25 +147,21 @@ const createGreen = () => {
   );
 };
 
-
-const continousObstacleCars = () => {
-  setInterval(() => {
-    createBlue();
-  }, 1000);
-  setInterval(() => {
-    createWhite();
-  }, 3000);
-  setInterval(() => {
-    createRed();
-  }, 2000);
-  setInterval(() => {
-    createGreen();
-  }, 4000);
-};
-continousObstacleCars();
+setInterval(() => {
+  createBlue();
+}, 1000);
+setInterval(() => {
+  createWhite();
+}, 1000);
+setInterval(() => {
+  createRed();
+}, 1000);
+setInterval(() => {
+  createGreen();
+}, 2000);
 
 const inGrid = (x, y) => {
-  if (x < 0 || y < 0 || x > 67 || y > 27) {
+  if (x < 0 || y < 0 || x > 66 || y > 27) {
     return false;
   }
   return true;
@@ -165,7 +173,6 @@ const onScreen = (x, y) => {
   return true;
 };
 // move player
-
 const movePlayerCar = () => {
   playerMove.style.left = `${(playerCar.x * 20).toString()}px`;
   playerMove.style.top = `${(playerCar.y * 20).toString()}px`;
@@ -178,7 +185,7 @@ const moveDown = () => {
 };
 const moveLeft = () => {
   if (onScreen(playerCar.x - 1, playerCar.y)) {
-    playerCar.x -= 4;
+    playerCar.x -= 2;
     movePlayerCar(playerCar.x, playerCar.y);
   }
 };
@@ -190,7 +197,7 @@ const moveUp = () => {
 };
 const moveRight = () => {
   if (onScreen(playerCar.x + 1, playerCar.y)) {
-    playerCar.x += 4;
+    playerCar.x += 2;
     movePlayerCar(playerCar.x, playerCar.y);
   }
 };
@@ -214,10 +221,3 @@ window.addEventListener('keydown', (evt) => {
     default:
   }
 });
-
-
-let timeNow = 60;
-setInterval(() => {
-  timeNow -= 1;
-  document.querySelector('.timer').innerHTML = timeNow;
-}, 1000);

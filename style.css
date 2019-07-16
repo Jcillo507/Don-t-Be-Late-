@@ -6,28 +6,30 @@ body {
     left:0px;
     right:0px;
 }
-
 header {
     display: flex;
     justify-content: center;
-    background: lightgoldenrodyellow;
+    font-family: 'Acme',sans-serif;
+    background: #70697B;
     font-size: 20px;
 }
 h2{ 
     align-content: center;
+    color: #DAEFF6;
+    font-family: 'Acme',sans-serif;
+    font-size: 40px;
+    margin: 0;
 }
 button {
     font-size: 20px;
-    background: lightgreen;
-    border: 4px red solid;
+    background: #00A98B;
+    border: 4px #FFC871;
+    color: #FEFEDF;
     min-width: 15vw;
 }
-
 .backgroundImage {
     display: flex;
-    justify-content: center
 }
-
 .road {
     width: 100vw;
     height: 80vh;
@@ -37,20 +39,18 @@ button {
     position: relative;
 
 }
-
 .playerCar {
     position: absolute;
     opacity:1;
     transition: all 0.1s;
-    background-image: url('whiteCar.png');
+    background-image: url('purpleCar.png');
     background-size: contain;
-    height: 180px;
+    height: 90px;
     width: 45px;
     background-repeat: no-repeat;
 }
-
 .blueCar{
-    height: 180px;
+    height: 90px;
     width: 45px;
     background-image: url('blueCar.png'); 
     position: absolute;
@@ -59,7 +59,7 @@ button {
 
 }
 .whiteCar {
-    height: 180px;
+    height: 90px;
     width: 45px;
     background-image: url('whiteCar.png');
     position: absolute;
@@ -68,7 +68,7 @@ button {
 
 }
 .greenCar {
-    height: 180px;
+    height: 90px;
     width: 45px;
     background-image: url('greenCar.png');
     position: absolute;
@@ -76,9 +76,8 @@ button {
     background-repeat: no-repeat;
 
 }
-
 .redCar {
-    height: 180px;
+    height: 90px;
     width: 45px;
     background-image: url('redCar.png');
     position: absolute;
@@ -86,21 +85,31 @@ button {
     background-repeat: no-repeat;
 
 }
-
 .footerContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     
 }
 .timer{
-    z-index: 2;
+    color: pink;
+    font-size: 30px;
+    align-self: center;
+
 }
 .restart{
     height : 8vh;
 }
 footer {
     min-height: 10vh;
-    background: lightgoldenrodyellow;
+    background: #70697B;
 
+}
+@keyframes blink{
+    50%{
+        opacity:0
+    }
+}
+.ten{
+    animation: blink 1s linear infinite;
 }
