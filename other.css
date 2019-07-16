@@ -1,3 +1,7 @@
+*{
+    
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
+
 }
 .playGame {
     height: 20%;
@@ -27,5 +32,5 @@ p{
      color: #DAEFF6;
      font-family: 'Acme',sans-serif;
      font-size: 40px;
-     margin: 20px;
+     margin: 50px;
 }
