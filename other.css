@@ -1,7 +1,3 @@
-*{
-    
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -12,7 +8,13 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
-
+}
+p {
+     align-content: center;
+     color: #DAEFF6;
+     font-family: 'Acme',sans-serif;
+     font-size: 40px;
+     margin: 50px;
 }
 .playGame {
     height: 20%;
@@ -22,15 +24,8 @@ body {
     color: #FFA186;
     animation: colorChange 2s linear infinite
 }
-img{
+img {
     width: 30%;
     height: 50%;
     border: 2px white solid;
-}
-p{
-     align-content: center;
-     color: #DAEFF6;
-     font-family: 'Acme',sans-serif;
-     font-size: 40px;
-     margin: 50px;
 }

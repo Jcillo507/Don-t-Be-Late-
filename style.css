@@ -1,10 +1,11 @@
-body {
+body 
+{
     background: black;
-    position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 header {
     display: flex;
@@ -19,7 +20,7 @@ h2{
     font-family: 'Acme',sans-serif;
     font-size: 40px;
     margin: 0;
-    padding:0; 
+    padding: 0; 
 }
 button {
     font-size: 20px;
