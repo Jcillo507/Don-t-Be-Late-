@@ -19,6 +19,7 @@ h2{
     font-family: 'Acme',sans-serif;
     font-size: 40px;
     margin: 0;
+    padding:0; 
 }
 button {
     font-size: 20px;
@@ -27,7 +28,7 @@ button {
     color: #FEFEDF;
     min-width: 15vw;
 }
-.backgroundImage {
+.background-image {
     display: flex;
 }
 .road {
@@ -49,7 +50,7 @@ button {
     width: 45px;
     background-repeat: no-repeat;
 }
-.blueCar{
+.blue-car{
     height: 90px;
     width: 45px;
     background-image: url('blueCar.png'); 
@@ -58,7 +59,7 @@ button {
     background-repeat: no-repeat;
 
 }
-.whiteCar {
+.white-car {
     height: 90px;
     width: 45px;
     background-image: url('whiteCar.png');
@@ -67,7 +68,7 @@ button {
     background-repeat: no-repeat;
 
 }
-.greenCar {
+.green-car {
     height: 90px;
     width: 45px;
     background-image: url('greenCar.png');
@@ -76,7 +77,7 @@ button {
     background-repeat: no-repeat;
 
 }
-.redCar {
+.red-car {
     height: 90px;
     width: 45px;
     background-image: url('redCar.png');
@@ -85,7 +86,7 @@ button {
     background-repeat: no-repeat;
 
 }
-.footerContainer {
+.footer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +94,7 @@ button {
 }
 .timer{
     color: pink;
-    font-size: 30px;
+    font-size: 50px;
     align-self: center;
 
 }

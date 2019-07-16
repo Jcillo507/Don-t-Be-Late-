@@ -2,13 +2,11 @@ const playerCar = {
   x: 32, y: 12, height: '90px', width: '45px',
 };
 
-const obstacleCars = [];
-
 const playerMove = document.querySelector('.playerCar');
 
 playerMove.style.left = '650px';
 playerMove.style.top = '240px';
-let isThereObstacle = (obstacleCar) => {
+const isThereObstacle = (obstacleCar) => {
   const playerX = parseInt(playerCar.x, 10) * 20;
   const playerY = parseInt(playerCar.y, 10) * 20;
   const playerH = parseInt(playerCar.height, 10);
@@ -25,7 +23,7 @@ let isThereObstacle = (obstacleCar) => {
     && (playerY + playerH > obstacleY)
 
   ) {
-    window.location.replace('lose.html')
+    window.location.replace('lose.html');
     return true;
   }
   return false;
@@ -35,25 +33,18 @@ setInterval(() => {
   timeNow -= 1;
   document.querySelector('.timer').innerHTML = timeNow;
 }, 1000);
-const tenSecondsLeft = () => {
-  if (document.querySelector('.timer').innerHTML < 50) {
-    const timer = document.querySelector('.timer');
-    timer.classList.add('ten');
-  }
-};
-tenSecondsLeft();
 setInterval(() => {
   window.location.replace('win.html');
   timeNow = 0;
 }, 60000);
 const createBlue = () => {
   const obstacleCar = document.createElement('div');
-  obstacleCar.classList.add('blueCar');
+  obstacleCar.classList.add('blue-car');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
   obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
-  obstacleCars.push(obstacleCar);
+
 
   obstacleCar.y = 0;
   const obstacleCarInterval = setInterval(
@@ -61,10 +52,9 @@ const createBlue = () => {
       if (obstacleCar.y === 625) {
         obstacleCar.remove();
         clearInterval(obstacleCarInterval);
-        obstacleCars.splice(obstacleCar);
       } else {
         isThereObstacle(obstacleCar);
-        obstacleCar.y += 1;
+        obstacleCar.y += 2;
         obstacleCar.style.top = `${obstacleCar.y}px`;
       }
     },
@@ -73,12 +63,12 @@ const createBlue = () => {
 };
 const createWhite = () => {
   const obstacleCar = document.createElement('div');
-  obstacleCar.classList.add('whiteCar');
+  obstacleCar.classList.add('white-car');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
   obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
-  obstacleCars.push(obstacleCar);
+
 
   obstacleCar.y = 0;
   const obstacleCarInterval = setInterval(
@@ -86,10 +76,9 @@ const createWhite = () => {
       if (obstacleCar.y === 625) {
         obstacleCar.remove();
         clearInterval(obstacleCarInterval);
-        obstacleCars.splice(obstacleCar);
       } else {
         isThereObstacle(obstacleCar);
-        obstacleCar.y += 1;
+        obstacleCar.y += 4;
         obstacleCar.style.top = `${obstacleCar.y}px`;
       }
     },
@@ -98,12 +87,12 @@ const createWhite = () => {
 };
 const createRed = () => {
   const obstacleCar = document.createElement('div');
-  obstacleCar.classList.add('redCar');
+  obstacleCar.classList.add('red-car');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
   obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
-  obstacleCars.push(obstacleCar);
+
 
   obstacleCar.y = 0;
   const obstacleCarInterval = setInterval(
@@ -111,7 +100,6 @@ const createRed = () => {
       if (obstacleCar.y === 625) {
         obstacleCar.remove();
         clearInterval(obstacleCarInterval);
-        obstacleCars.splice(obstacleCar);
       } else {
         isThereObstacle(obstacleCar);
         obstacleCar.y += 2;
@@ -123,12 +111,11 @@ const createRed = () => {
 };
 const createGreen = () => {
   const obstacleCar = document.createElement('div');
-  obstacleCar.classList.add('greenCar');
+  obstacleCar.classList.add('green-car');
   obstacleCar.style.left = `${Math.random() * 1424}px`;
   obstacleCar.style.height = '90px';
   obstacleCar.style.width = '45px';
   document.querySelector('.road').appendChild(obstacleCar);
-  obstacleCars.push(obstacleCar);
 
   obstacleCar.y = 0;
   const obstacleCarInterval = setInterval(
@@ -136,7 +123,6 @@ const createGreen = () => {
       if (obstacleCar.y === 625) {
         obstacleCar.remove();
         clearInterval(obstacleCarInterval);
-        obstacleCars.splice(obstacleCar);
       } else {
         isThereObstacle(obstacleCar);
         obstacleCar.y += 4;

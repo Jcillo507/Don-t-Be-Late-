@@ -1,6 +1,6 @@
 body{
         background: #70697B;
-        position: stretch;
+        position: fixed;
         top: 0px;
         bottom: 0px;
         left: 0px;
@@ -61,4 +61,8 @@ body{
     color: #FFA186;
     animation: colorChange 2s linear infinite
     
+}
+img{
+    height:150px;
+    width: 300px;
 }
